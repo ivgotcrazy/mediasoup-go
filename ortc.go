@@ -526,7 +526,9 @@ func getConsumerRtpParameters(
 		}
 	}
 
-	consumerParams := &RtpParameters{}
+	consumerParams := &RtpParameters{
+		Rtcp: consumableRtpParameters.Rtcp,
+	}
 	rtxSupported := false
 
 	for _, codec := range consumableRtpParameters.Codecs {
